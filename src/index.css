@@ -71,5 +71,12 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* Add these lines for the background image */
+    background-image: url('/johnfroze/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
   }
 }
