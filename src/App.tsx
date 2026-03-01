@@ -63,34 +63,38 @@ function App() {
       {/* Main Content */}
       <div className="relative z-10 container mx-auto px-4 py-8 min-h-screen flex flex-col items-center">
         
-        {/* Header */}
-        <div className="text-center mb-8">
-          <div className="flex items-center justify-center gap-3 mb-3">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center shadow-lg shadow-blue-500/30 border border-blue-400/50">
-              <Link2 className="w-6 h-6 text-white" />
-            </div>
-            <h1 
-              className="text-2xl md:text-4xl font-bold"
-              style={{
-                background: 'linear-gradient(90deg, #60a5fa, #a78bfa, #f472b6)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                textShadow: '0 0 30px rgba(96, 165, 250, 0.5)',
-              }}
-            >
-              Jfroze Wemix Price Calculator
-            </h1>
-          </div>
-          <div className="flex items-center justify-center gap-3">
-            <div className="h-px w-16 bg-gradient-to-r from-transparent via-blue-400 to-transparent" />
-            <p className="text-cyan-300 text-sm flex items-center justify-center gap-1.5">
-              <Activity className="w-3.5 h-3.5" />
-              Live Crypto Price Tracker
-            </p>
-            <div className="h-px w-16 bg-gradient-to-r from-transparent via-blue-400 to-transparent" />
-          </div>
-        </div>
+       {/* Header */}
+<div className="text-center mb-8">
+  <div className="flex items-center justify-center mb-3">
+    <div className="relative">
+      {/* Animated glow background */}
+      <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full opacity-75 blur-xl animate-pulse" />
+      <div 
+        className="absolute -inset-2 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-lg opacity-60 blur-lg animate-glow-running" 
+        style={{
+          animation: 'glowRunning 2s linear infinite',
+        }}
+      />
+      {/* Logo image */}
+      <img 
+        src="/johnfroze/logo.png" 
+        alt="Jfroze Wemix Price Calculator" 
+        className="relative h-16 md:h-20 w-auto drop-shadow-2xl"
+        style={{
+          filter: 'drop-shadow(0 0 10px rgba(59, 130, 246, 0.8)) drop-shadow(0 0 20px rgba(236, 72, 153, 0.6))',
+        }}
+      />
+    </div>
+  </div>
+  <div className="flex items-center justify-center gap-3">
+    <div className="h-px w-16 bg-gradient-to-r from-transparent via-blue-400 to-transparent" />
+    <p className="text-cyan-300 text-sm flex items-center justify-center gap-1.5 animate-pulse">
+      <Activity className="w-3.5 h-3.5" />
+      Live Crypto Price Tracker
+    </p>
+    <div className="h-px w-16 bg-gradient-to-r from-transparent via-blue-400 to-transparent" />
+  </div>
+</div>
 
         {/* Currency Selector */}
         <div className="w-full max-w-sm mb-5">
